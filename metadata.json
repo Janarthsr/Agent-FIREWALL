@@ -1,0 +1,8 @@
+{
+  "name": "Agent Firewall",
+  "description": "Trust infrastructure for human + AI collaboration. The LLM may propose. Code decides.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

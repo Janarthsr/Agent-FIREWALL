@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Newsreader', Georgia, Cambria, 'Times New Roman', serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    background-color: #fbf8f3;
+    color: #1c1917;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* ===================================================================== */
+/* CINEMATIC GOLDEN-HOUR LANDSCAPE ANIMATIONS                           */
+/* ===================================================================== */
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.35; transform: scale(0.98); }
+  50% { opacity: 0.75; transform: scale(1.02); }
+}
+
+@keyframes sunburstPulse {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+@keyframes sunbeamBreathe {
+  0%, 100% { opacity: 0.45; transform: skewX(-14deg) scaleY(1); }
+  50% { opacity: 0.72; transform: skewX(-12deg) scaleY(1.06); }
+}
+
+@keyframes cloudDriftSlow {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-40px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes mistRoll {
+  0% { transform: translateX(0) scaleY(1); opacity: 0.55; }
+  50% { transform: translateX(-45px) scaleY(1.08); opacity: 0.75; }
+  100% { transform: translateX(0) scaleY(1); opacity: 0.55; }
+}
+
+@keyframes waterShimmer {
+  0%, 100% { opacity: 0.45; transform: scaleY(1) translateY(0); }
+  50% { opacity: 0.85; transform: scaleY(1.12) translateY(-1px); }
+}
+
+@keyframes branchSway {
+  0%, 100% { transform: rotate(0deg) translate(0, 0); }
+  50% { transform: rotate(1.2deg) translate(3px, 2px); }
+}
+
+@keyframes lightMoteFloat {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  25% { opacity: 0.75; }
+  75% { opacity: 0.75; }
+  100% { transform: translateY(-130px) translateX(30px); opacity: 0; }
+}
+
+/* 6 Organic 3D Falling Leaves */
+@keyframes leafDrift1 {
+  0% { transform: translate3d(0, -60px, 0) rotate(15deg) rotateY(0deg); opacity: 0; }
+  10% { opacity: 0.95; }
+  45% { transform: translate3d(55px, 320px, 0) rotate(85deg) rotateY(180deg); }
+  75% { transform: translate3d(20px, 620px, 0) rotate(145deg) rotateY(320deg); }
+  92% { opacity: 0.9; }
+  100% { transform: translate3d(75px, 920px, 0) rotate(220deg) rotateY(420deg); opacity: 0; }
+}
+
+@keyframes leafDrift2 {
+  0% { transform: translate3d(0, -40px, 0) rotate(-25deg) rotateX(0deg); opacity: 0; }
+  15% { opacity: 0.9; }
+  50% { transform: translate3d(-65px, 360px, 0) rotate(55deg) rotateX(170deg); }
+  80% { transform: translate3d(-30px, 660px, 0) rotate(125deg) rotateX(290deg); }
+  92% { opacity: 0.85; }
+  100% { transform: translate3d(-80px, 950px, 0) rotate(200deg) rotateX(360deg); opacity: 0; }
+}
+
+@keyframes leafDrift3 {
+  0% { transform: translate3d(0, -50px, 0) rotate(40deg) rotateZ(0deg); opacity: 0; }
+  12% { opacity: 0.85; }
+  40% { transform: translate3d(40px, 280px, 0) rotate(110deg) rotateZ(90deg); }
+  70% { transform: translate3d(10px, 570px, 0) rotate(190deg) rotateZ(180deg); }
+  92% { opacity: 0.8; }
+  100% { transform: translate3d(55px, 880px, 0) rotate(290deg) rotateZ(270deg); opacity: 0; }
+}
+
+@keyframes leafDrift4 {
+  0% { transform: translate3d(0, -30px, 0) rotate(-10deg) scale(0.9); opacity: 0; }
+  10% { opacity: 0.9; }
+  55% { transform: translate3d(-45px, 390px, 0) rotate(70deg) scale(1); }
+  85% { opacity: 0.85; }
+  100% { transform: translate3d(-15px, 860px, 0) rotate(160deg) scale(0.9); opacity: 0; }
+}
+
+@keyframes leafDrift5 {
+  0% { transform: translate3d(0, -45px, 0) rotate(30deg) scale(1.15); opacity: 0; }
+  15% { opacity: 0.9; }
+  48% { transform: translate3d(70px, 340px, 0) rotate(120deg) scale(1.1); }
+  85% { opacity: 0.85; }
+  100% { transform: translate3d(100px, 890px, 0) rotate(240deg) scale(1.15); opacity: 0; }
+}
+
+@keyframes leafDrift6 {
+  0% { transform: translate3d(0, -40px, 0) rotate(-15deg) scale(0.95); opacity: 0; }
+  12% { opacity: 0.85; }
+  52% { transform: translate3d(35px, 370px, 0) rotate(95deg) scale(0.9); }
+  80% { opacity: 0.8; }
+  100% { transform: translate3d(-30px, 910px, 0) rotate(180deg) scale(0.95); opacity: 0; }
+}
+
+/* ===================================================================== */
+/* 500-700MS SMOOTH NAVIGATION PAGE TRANSITIONS                          */
+/* ===================================================================== */
+
+.page-transition-wrapper {
+  transition: opacity 320ms cubic-bezier(0.22, 1, 0.36, 1), transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.page-transition-exiting {
+  opacity: 0 !important;
+  transform: translateY(-8px) scale(0.998) !important;
+}
+
+.page-transition-entering {
+  opacity: 0 !important;
+  transform: translateY(10px) scale(0.998) !important;
+}
+
+.page-transition-idle {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+@keyframes signalPulse {
+  0% { left: 10%; opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { left: 90%; opacity: 0.3; }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-delay: 0s !important;
+    transition-duration: 0s !important;
+  }
+}
